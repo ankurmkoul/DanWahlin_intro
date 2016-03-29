@@ -13,4 +13,5 @@ demoApp.config(function($routeProvider) {
 				templateUrl: 'views/view2.html'
 			})
 		.otherwise({ redirecTo: '/view1' });
+	
 });

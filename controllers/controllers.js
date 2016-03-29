@@ -1,15 +1,23 @@
 /* 1- Adicionando uma função anônima à declaração do controller*/
 demoApp.controller('SimpleController', function($scope) {
-	$scope.customers = [
-		{name: 'Mariana Loureiro', city: 'Sorocaba'},
-		{name: 'Marco Souza', city: 'Milão'},
-		{name: 'Eduardo Loureiro', city: 'São Paulo'}
-	];
+	$scope.customers = [{
+		name: 'Mariana Loureiro',
+		city: 'Sorocaba'
+	}, {
+		name: 'Marco Souza',
+		city: 'Milão'
+	}, {
+		name: 'Eduardo Loureiro',
+		city: 'São Paulo'
+	}];
 
 	$scope.addCustomer = function() {
-		$scope.customers.push(
-			{name: $scope.newCustomer.name, city: $scope.newCustomer.city}
-		);
+		$scope.customers.push({
+			name: $scope.newCustomer.name,
+			city: $scope.newCustomer.city
+		});
+		$scope.newCustomer.name = "";
+		$scope.newCustomer.city = "";
 	};
 });
 
@@ -38,4 +46,3 @@ controllers.SimpleController = function($scope) {
 };
 
 demoApp.controller(controllers);*/
-
